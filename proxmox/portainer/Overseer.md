@@ -90,3 +90,17 @@ save, exit and start the container
 
 
 
+Portainer is kind of shit with gluetun, so docker will fail to start
+
+```
+sudo systemctl stop docker
+```
+
+```
+sudo rm -rf /var/lib/docker/network
+```
+
+```
+sudo systemctl start docker
+```
+

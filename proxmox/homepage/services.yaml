@@ -1,0 +1,78 @@
+- Homelab:
+    - Proxmox:
+        icon: proxmox.png
+        href: https://pve.local.morariu.app
+        widget:
+          type: proxmox
+          url: https://pve.local.morariu.app
+          username: homepage_api@pam!homepage
+          password: eae97240-baa4-46c0-941f-f6985a5be546
+    - Portainer:
+        icon: portainer.png
+        href: https://stacks.local.morariu.app
+        widget:
+          type: portainer
+          url: https://stacks.local.morariu.app
+          env: 2
+          key: ptr_hhClvJ8ITTbLC0OtmJbBstBH5ggxSVfFeTdT10xTigw=
+    - Synology:
+        icon: synology.png
+        href: https://snfr.local.morariu.app
+        # widget:
+        #   type: diskstation
+        #   url: https://snfr.local.morariu.app
+        #   username: username
+        #   password: password
+        #   volume: volume_N # optional
+    - Unify:
+- Media:
+    - Plex:
+        icon: plex.png
+        href: https://plex.local.morariu.app
+        description: Media Library
+        widget:
+          type: plex
+          url: https://plex.local.morariu.app
+          key: ty-jW6J3AaQe_5gzxj_r
+    - Overseer:   
+        icon: overseerr.png
+        href: https://seer.local.morariu.app
+        description: Request manager
+        widget:
+          type: overseerr
+          url: https://seer.local.morariu.app
+          key: MTcwOTkyMTM5NzQ0NjVkODdjYjk2LTc5ZTEtNDAzMy1hNzFkLWNjMzA0YWVlMTJlZQ==         
+    - Radarr:
+        icon: radarr.png
+        href: https://radarr.local.morariu.app
+        description: Movie management
+        widget:
+          type: radarr
+          url: https://radarr.local.morariu.app
+          key: 10b779f3c0be46b2a68797ab68337403
+    - Sonarr:
+        icon: sonarr.png
+        href: https://sonarr.local.morariu.app
+        description: Series management
+        widget:
+          type: sonarr
+          url: https://sonarr.local.morariu.app
+          key: 6ea57b0acf9446d793cc29e2cf452d76
+    - Prowlarr:
+        icon: prowlarr.png
+        href: https://prowlarr.local.morariu.app
+        description: Series management
+        widget:
+          type: prowlarr
+          url: https://prowlarr.local.morariu.app
+          key: 44bd1d0b6de24e03bed547b6e4c50a5a      
+    - Qbittorrent:
+        icon: qbittorrent.png
+        href: https://qbit.local.morariu.app
+        description: Download client
+    #     widget:
+    #       type: qbittorrent
+    #       url: https://qbit.local.morariu.app
+    #       username: username
+    #       password: password      
+

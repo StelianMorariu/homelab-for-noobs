@@ -23,7 +23,29 @@ To fix that you need to:
 - rmeove the `.storage` from the list of patterns
 
 
-## Zigbe2MQTT add-on
+
+
+
+# Zigbee stuff
+
+1. Attach USB device to Proxmox host
+2. Edit the VM and pass the USB device
+
+## Install SSH add-on
+
+This is required to get the USB device path  which is needed for Zigbee
+
+```
+ls -l /dev/serial/by-id/
+```
+
+## Install MQTTBroker
+
+- install from the add-on store
+- create separate user & pass to be used only by mqtt
+
+
+## Install Zigbe2Mqtt
 
 Official guide [here](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt#installation)
 
@@ -32,3 +54,21 @@ Official guide [here](https://github.com/zigbee2mqtt/hassio-zigbee2mqtt#installa
     - click ⋮ → `Repositories`, 
     - fill in `https://github.com/zigbee2mqtt/hassio-zigbee2mqtt` 
     - click `Add` → `Close` 
+
+
+
+MQTT section: 
+
+```
+server: mqtt://core-mosquitto:1883
+user: mqtt
+password: "blood-suck-wire"
+```
+
+Serial section:
+
+```
+port: >-
+  /dev/serial/by-id/usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20231218172750-if00
+adapter: ezsp
+```
