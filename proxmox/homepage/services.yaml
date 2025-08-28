@@ -1,0 +1,123 @@
+- Stats:
+  - CPU Usage:
+      widget:
+        type: glances
+        url: {{HOMEPAGE_VAR_GLANCES_URL}}
+        username: {{HOMEPAGE_VAR_GLANCES_USER}}
+        password: {{HOMEPAGE_VAR_GLANCES_PASS}}
+        version: 4
+        metric: cpu
+  - Memory:
+      widget:
+        type: glances
+        url: {{HOMEPAGE_VAR_GLANCES_URL}}
+        username: {{HOMEPAGE_VAR_GLANCES_USER}}
+        password: {{HOMEPAGE_VAR_GLANCES_PASS}}
+        version: 4
+        metric: memory       
+  - Network Usage:
+      widget:
+        type: glances
+        url: {{HOMEPAGE_VAR_GLANCES_URL}}
+        username: {{HOMEPAGE_VAR_GLANCES_USER}}
+        password: {{HOMEPAGE_VAR_GLANCES_PASS}}
+        version: 4
+        metric: network:enp1s0
+  - Disk I/O:
+      widget:
+        type: glances
+        url: {{HOMEPAGE_VAR_GLANCES_URL}}
+        username: {{HOMEPAGE_VAR_GLANCES_USER}}
+        password: {{HOMEPAGE_VAR_GLANCES_PASS}}
+        version: 4
+        metric: disk:sda3                     
+- Homelab:
+  - Caddy:
+      widget:
+        type: caddy
+        url: {{HOMEPAGE_VAR_CADDY_URL}}
+  - Proxmox:
+      icon: proxmox.png
+      href: {{HOMEPAGE_VAR_PROXMOX_URL}}
+      widget:
+        type: proxmox
+        url: {{HOMEPAGE_VAR_PROXMOX_URL}}
+        username: {{HOMEPAGE_VAR_PROXMOX_USER}}
+        password: {{HOMEPAGE_VAR_PROXMOX_PASS}}
+  - Portainer:
+      icon: portainer.png
+      href: {{HOMEPAGE_VAR_PORTAINER_URL}}
+      widget:
+        type: portainer
+        url: {{HOMEPAGE_VAR_PORTAINER_URL}}
+        env: {{HOMEPAGE_VAR_PORTAINER_ENV}}
+        key: {{HOMEPAGE_VAR_PORTAINER_KEY}}
+  - Synology:
+      icon: synology.png
+      href: {{HOMEPAGE_VAR_SYNOLOGY_URL}}
+  #     widget:
+  #       type: diskstation
+  #       url: {{HOMEPAGE_VAR_SYNOLOGY_URL}}
+  #       username: {{HOMEPAGE_VAR_SYNOLOGY_USER}}
+  #       password: {{HOMEPAGE_VAR_SYNOLOGY_PASS}}
+  #       volume: volume_N # optional
+  - Unify:
+       description: {{HOMEPAGE_VAR_TEST}}
+  - SLZB: 
+       icon: zigbee.png
+       description:   Zigbee coordinator
+       href: {{HOMEPAGE_VAR_SLZB_URL}}  
+- Media:
+  - Plex:
+      icon: plex.png
+      href: {{HOMEPAGE_VAR_PLEX_URL}}
+      description: Media Library
+      widget:
+        type: plex
+        url: {{HOMEPAGE_VAR_PLEX_URL}}
+        key: {{HOMEPAGE_VAR_PLEX_KEY}}
+  - Overseer:
+      icon: overseerr.png
+      href: {{HOMEPAGE_VAR_SEER_URL}}
+      description: Request manager
+      server: my-docker # The docker server that was configured
+      container: overseerr # The name of the container you'd like to connect
+      widget:
+        type: overseerr
+        url: {{HOMEPAGE_VAR_SEER_URL}}
+        key: {{HOMEPAGE_VAR_SEER_KEY}}         
+  - Radarr:
+      icon: radarr.png
+      href: {{HOMEPAGE_VAR_RADARR_URL}}
+      description: Movie management
+      widget:
+        type: radarr
+        url: {{HOMEPAGE_VAR_RADARR_URL}}
+        key: {{HOMEPAGE_VAR_RADARR_KEY}}
+  - Sonarr:
+      icon: sonarr.png
+      href: {{HOMEPAGE_VAR_SONARR_URL}}
+      description: Series management
+      widget:
+        type: sonarr
+        url: {{HOMEPAGE_VAR_SONARR_URL}}
+        key: {{HOMEPAGE_VAR_SONARR_KEY}}
+  - Prowlarr:
+      icon: prowlarr.png
+      href: {{HOMEPAGE_VAR_PROWLARR_URL}}
+      description: Indexer management
+      widget:
+        type: prowlarr
+        url: {{HOMEPAGE_VAR_PROWLARR_URL}}
+        key: {{HOMEPAGE_VAR_PROWLARR_KEY}}      
+  - Qbittorrent:
+      icon: qbittorrent.png
+      href: {{HOMEPAGE_VAR_QBIT_URL}}
+      description: Download client
+  #     widget:
+  #       type: qbittorrent
+  #       url: {{HOMEPAGE_VAR_QBIT_URL}}
+  #       username: {{HOMEPAGE_VAR_QBIT_USER}}
+  #       password: {{HOMEPAGE_VAR_QBIT_PASS}}      
+
+
