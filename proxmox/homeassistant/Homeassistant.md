@@ -72,3 +72,47 @@ port: >-
   /dev/serial/by-id/usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20231218172750-if00
 adapter: ezsp
 ```
+
+### Sonos config backup
+```
+data_path: /config/zigbee2mqtt
+socat:
+  enabled: false
+  master: pty,raw,echo=0,link=/tmp/ttyZ2M,mode=777
+  slave: tcp-listen:8485,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5
+  options: "-d -d"
+  log: false
+mqtt:
+  server: mqtt://homeassistant:1883
+  user: mqtt
+  password: blood-suck-wire
+serial:
+  port: >-
+    /dev/serial/by-id/usb-ITEAD_SONOFF_Zigbee_3.0_USB_Dongle_Plus_V2_20231218172750-if00
+  adapter: ezsp
+```
+
+### SLZB-06P7 config
+```
+data_path: /config/zigbee2mqtt
+socat:
+  enabled: false
+  master: pty,raw,echo=0,link=/tmp/ttyZ2M,mode=777
+  slave: tcp-listen:8485,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5
+  options: "-d -d"
+  log: false
+mqtt:
+  server: mqtt://homeassistant:1883
+  user: mqtt
+  password: blood-suck-wire
+serial:
+# Location of SLZB-06P7
+  port: tcp://192.168.20.207:6638
+  baudrate: 115200
+  adapter: zstack
+# Disable green led?
+  disable_led: false
+# Set output power to max 20
+advanced:
+  transmit_power: 20
+```

@@ -61,7 +61,7 @@ my-docker:
 Copy your assets to the image folder
 
 ```
-scp /Users/stelian/resources/smo_favicon_color.png  root@192.168.100.175:/var/lib/docker/volumes/homepage/images/images/icons
+scp /Users/stelian/resources/smo_favicon_color.png  root@192.168.100.175:/var/lib/docker/volumes/homepage/images/icons
 ```
 
  

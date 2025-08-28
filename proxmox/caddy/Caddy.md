@@ -243,3 +243,33 @@ curl -X GET "https://api.cloudflare.com/client/v4/zones/5a46a3b8235a058f07ee9ef3
 dig TXT _acme-challenge.portainer.local.morariu.app
 
 sudo journalctl -u caddy.service --no-pager | grep -i "tls"
+
+## Homepage widget
+
+In order to use the Homepage Caddy widget we need to bind the admin API to the actual container IP
+
+Add this in the Caddyfile
+
+```
+{
+    admin 192.168.100.8:2019
+}
+```
+
+In the LXC container console
+```
+caddy fmt --overwrite
+```
+ then 
+
+ ```
+caddy validate --config /etc/caddy/Caddyfile
+```
+
+and finally, we need to restart the container insted of just applying the changes
+
+```
+sudo systemctl restart caddy
+```
+
+
